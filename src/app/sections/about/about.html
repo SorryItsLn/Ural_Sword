@@ -1,0 +1,28 @@
+<section class="section" id="about">
+  <div class="container about">
+    <div class="about__text">
+      <h2 class="section__title">О турнире</h2>
+      <p class="section__lead">
+        &lt;Пара предложений: что за турнир, кто участвует, почему стоит прийти. Например: бои в
+        полном доспехе, лучшие бойцы Урала и соседних регионов, честные поединки по правилам
+        ИСБ.&gt;
+      </p>
+      <p class="about__desc">&lt;Дополнительный абзац: история турнира, организаторы, формат.&gt;</p>
+
+      <ul class="about__stats">
+        @for (stat of stats; track stat.label) {
+          <li class="about__stat">
+            <span class="about__value">{{ stat.value }}</span>
+            <span class="about__label">{{ stat.label }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="about__photos">
+      <div class="ph about__photo about__photo--big">фото</div>
+      <div class="ph about__photo">фото</div>
+      <div class="ph about__photo">фото</div>
+    </div>
+  </div>
+</section>

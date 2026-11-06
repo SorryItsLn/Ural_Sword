@@ -1,60 +1,115 @@
-# UralSword
+# Ural Sword — лендинг турнира
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.5.
+Одностраничный сайт турнира по историческому средневековому бою (ИСБ) в Перми и школы «ИСБ Пермь».
 
-## Development server
+Регистрация бойцов — отдельный проект `../ural-sword-registrations`.
 
-To start a local development server, run:
+## Стек
 
-```bash
-ng serve
-```
+- Angular 22, standalone-компоненты, сигналы
+- SSR + пререндер (`@angular/ssr`, Express)
+- SCSS, без UI-библиотек
+- npm
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Запуск
 
 ```bash
-ng generate component component-name
+npm install
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
 ```bash
-ng generate --help
+npm start
 ```
 
-## Building
-
-To build the project run:
+Дев-сервер на http://localhost:4200, перезагружается при изменениях.
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Сборка в `dist/ural-sword`. Запустить SSR-сервер из сборки:
 
 ```bash
-ng test
+npm run serve:ssr:ural-sword
 ```
 
-## Running end-to-end tests
+## Структура
 
-For end-to-end (e2e) testing, run:
+```
+src/
+├── index.html            SEO: title, description, Open Graph, JSON-LD (Event + школа)
+├── styles.scss           глобальные стили и общие классы
+├── styles/
+│   └── variables.scss    цвета, сетка, брейкпоинты
+└── app/
+    ├── app.html          порядок блоков на странице
+    └── sections/         по компоненту на блок
+        ├── header/       шапка, меню-якоря, бургер на телефоне
+        ├── hero/         первый экран с фоновым видео
+        ├── about/        о турнире + цифры
+        ├── nominations/  номинации
+        ├── program/      расписание дня
+        ├── tickets/      виджет Ticketscloud
+        ├── place/        площадка, как добраться, карта
+        ├── school/       блок школы (делает Дмитрий)
+        ├── gallery/      фото и видео
+        └── footer/       контакты, соглашения
+public/                   логотип, иконки, манифест — отдаются как есть
+```
+
+## Стили
+
+Все цвета — в `src/styles/variables.scss`. Пока палитра временная; когда придут цвета от дизайна, меняем только значения там.
+
+В компоненте:
+
+```scss
+@use 'variables' as v;
+
+.title {
+  color: v.$color-accent;
+}
+```
+
+Те же цвета доступны как CSS-переменные: `var(--color-accent)`.
+
+Общие классы из `styles.scss`: `.container`, `.section` (`--muted`, `__title`, `__lead`), `.btn` (`--ghost`), `.card`, `.ph`.
+
+Вёрстка mobile-first: базовые стили для телефона, дальше `@media (min-width: v.$bp-tablet)` и `v.$bp-desktop`.
+
+## Заглушки
+
+Страница пока собрана как каркас:
+
+- **Зелёные блоки** (класс `.ph`) — места под фото, видео и карту.
+- **Текст в `<угловых скобках>`** — заменить на реальный. В `.html` скобки записаны как `&lt;…&gt;`, в `.ts` — обычные `<…>`.
+- Списки (номинации, программа, цифры, галерея) лежат массивами в `.ts` файлах блоков.
+
+В `index.html` заглушки исторически в `[квадратных скобках]`: `[дата]`, `[домен]` и т.д.
+
+Найти всё, что ещё не заполнено:
 
 ```bash
-ng e2e
+grep -rn -e '&lt;' -e "'<" src/app
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+```bash
+grep -n '\[' src/index.html
+```
 
-## Additional Resources
+## Что ждём от организаторов
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# Ural_Sword
+- [ ] Цвета и логотип (сейчас временные: `public/logo.svg`, `favicon.svg`, `apple-touch-icon.png`)
+- [ ] Видео для первого экрана: горизонтальное, 1080p, 10–20 с, + постер
+- [ ] Фото, которые можно публиковать
+- [ ] Дата, площадка, номинации, количество участников и города
+- [ ] Программа дня
+- [ ] Код виджета Ticketscloud
+- [ ] Решение, можно ли брать фото и видео с «Меча России» для галереи
+- [ ] Домен — подставить в `index.html` вместо `[домен]`
+- [ ] Картинка для превью ссылок 1200×630 (`og-cover.jpg`)
+- [ ] Тексты соглашений для футера
+
+Название в `index.html` пока «Меч Урала» — заменить на Ural Sword.
+
+Дизайн-референс: https://nsw.newstarcamp.ru/main

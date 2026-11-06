@@ -1,0 +1,11 @@
+@use 'variables' as v;
+
+.tickets__widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  border: 2px dashed v.$color-accent;
+  border-radius: 8px;
+  color: v.$color-text-muted;
+}

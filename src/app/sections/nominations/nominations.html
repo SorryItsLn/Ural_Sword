@@ -1,0 +1,16 @@
+<section class="section section--muted" id="nominations">
+  <div class="container">
+    <h2 class="section__title">Номинации</h2>
+    <p class="section__lead">&lt;Короткое пояснение: в чём соревнуются бойцы&gt;</p>
+
+    <ul class="nominations">
+      @for (nomination of nominations; track $index) {
+        <li class="card nominations__item">
+          <div class="ph nominations__photo">фото</div>
+          <h3 class="nominations__title">{{ nomination.title }}</h3>
+          <p class="nominations__desc">{{ nomination.description }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

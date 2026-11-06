@@ -1,0 +1,56 @@
+@use 'variables' as v;
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: calc(100svh - #{v.$header-height});
+  overflow: hidden;
+
+  &__media {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    border-radius: 0;
+    object-fit: cover;
+    align-items: flex-start;
+    padding-top: 24px;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, v.$color-bg 0%, v.$color-overlay 45%, transparent 100%);
+  }
+
+  &__content {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 64px;
+  }
+
+  &__eyebrow {
+    margin-bottom: 12px;
+    color: v.$color-accent;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  &__title {
+    font-size: clamp(48px, 12vw, 128px);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  &__meta {
+    margin: 16px 0 32px;
+    font-size: clamp(18px, 3vw, 24px);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

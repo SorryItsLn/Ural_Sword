@@ -1,12 +1,22 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+
+import {
+  About,
+  Footer,
+  Gallery,
+  Header,
+  Hero,
+  Nominations,
+  Place,
+  Program,
+  School,
+  Tickets,
+} from './sections';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [About, Footer, Gallery, Header, Hero, Nominations, Place, Program, School, Tickets],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
 })
-export class App {
-  protected readonly title = signal('ural-sword');
-}
+export class App {}

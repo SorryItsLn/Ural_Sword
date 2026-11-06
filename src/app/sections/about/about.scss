@@ -1,0 +1,60 @@
+@use 'variables' as v;
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+
+  @media (min-width: v.$bp-desktop) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  &__desc {
+    color: v.$color-text-muted;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 40px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    border-left: 3px solid v.$color-accent;
+  }
+
+  &__value {
+    color: v.$color-accent;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__label {
+    margin-top: 6px;
+    color: v.$color-text-muted;
+  }
+
+  &__photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  &__photo {
+    aspect-ratio: 1;
+
+    &--big {
+      grid-column: 1 / -1;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}

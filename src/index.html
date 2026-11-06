@@ -1,13 +1,113 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>UralSword</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Меч Урала — турнир по историческому средневековому бою | Пермь</title>
+    <meta
+      name="description"
+      content="Турнир «Меч Урала» в Перми: бои в доспехах, лучшие бойцы региона, [дата] на [площадка]. Билеты онлайн. Школа ИСБ Пермь — запишитесь на пробную тренировку."
+    />
+
+    <link rel="canonical" href="https://[домен]/" />
+
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#14110f" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="Меч Урала" />
+    <meta property="og:title" content="Меч Урала — рыцарский турнир в Перми" />
+    <meta
+      property="og:description"
+      content="Бои в доспехах, звон стали и честные поединки. [Дата], [площадка]. Билеты онлайн."
+    />
+    <meta property="og:url" content="https://[домен]/" />
+
+    <meta property="og:image" content="https://[домен]/assets/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Бойцы в доспехах на турнире «Меч Урала»" />
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/heading.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="/assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin />
+
+    <link
+      rel="preload"
+      href="/assets/hero-poster.avif"
+      as="image"
+      type="image/avif"
+      fetchpriority="high"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Event",
+            "@id": "https://[домен]/#event",
+            "name": "Меч Урала — турнир по историческому средневековому бою",
+            "description": "Турнир по историческому средневековому бою в Перми: поединки в доспехах, [формат].",
+            "startDate": "[2026-11-XXT11:00:00+05:00]",
+            "endDate": "[2026-11-XXT18:00:00+05:00]",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "image": ["https://[домен]/assets/og-cover.jpg"],
+            "location": {
+              "@type": "Place",
+              "name": "[название площадки]",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "[улица, дом]",
+                "addressLocality": "Пермь",
+                "addressRegion": "Пермский край",
+                "addressCountry": "RU"
+              }
+            },
+            "organizer": { "@id": "https://[домен]/#school" },
+            "offers": {
+              "@type": "Offer",
+              "url": "[ссылка на билеты]",
+              "price": "[500]",
+              "priceCurrency": "RUB",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "[2026-10-XXT00:00:00+05:00]"
+            }
+          },
+          {
+            "@type": "SportsOrganization",
+            "@id": "https://[домен]/#school",
+            "name": "Школа ИСБ Пермь",
+            "url": "https://[домен]/",
+            "logo": "https://[домен]/assets/logo.png",
+            "telephone": "[+7XXXXXXXXXX]",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "[адрес зала]",
+              "addressLocality": "Пермь",
+              "addressCountry": "RU"
+            },
+            "sameAs": ["[https://vk.com/...]", "[https://t.me/...]"]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

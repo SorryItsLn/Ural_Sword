@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+.school__stub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  border: 2px dashed v.$color-border;
+  border-radius: 8px;
+  color: v.$color-text-muted;
+  text-align: center;
+}

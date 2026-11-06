@@ -1,0 +1,37 @@
+@use 'variables' as v;
+
+.place {
+  display: grid;
+  gap: 32px;
+
+  @media (min-width: v.$bp-desktop) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    align-items: center;
+  }
+
+  &__name {
+    font-size: 24px;
+  }
+
+  &__address {
+    margin: 8px 0 24px;
+    color: v.$color-text-muted;
+  }
+
+  &__info {
+    margin: 0;
+
+    dt {
+      color: v.$color-accent;
+      font-weight: 700;
+    }
+
+    dd {
+      margin: 4px 0 16px;
+    }
+  }
+
+  &__map {
+    aspect-ratio: 4 / 3;
+  }
+}

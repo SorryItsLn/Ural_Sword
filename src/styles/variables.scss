@@ -1,0 +1,53 @@
+// Временная палитра — заменим, когда придут цвета от дизайна.
+// В компонентах: @use 'variables' as v; → v.$color-accent
+// В рантайме те же значения доступны как CSS-переменные (миксин css-vars внизу).
+
+// ===== Фон =====
+$color-bg: #14110f; // основной, совпадает с theme-color в index.html
+$color-bg-elevated: #1e1a17; // карточки, плашки
+$color-bg-muted: #2a2420; // подложки, разделители блоков
+
+// ===== Текст =====
+$color-text: #f2ece4;
+$color-text-muted: #a89f94;
+$color-text-inverse: #14110f;
+
+// ===== Акценты =====
+$color-accent: #b8892f; // латунь/золото — кнопки, заголовки-акценты
+$color-accent-hover: #d4a548;
+$color-blood: #9e2a24; // красный — бейджи, «билеты», важное
+$color-steel: #8c939b; // сталь — иконки, обводки
+
+// ===== Служебные =====
+$color-border: rgba(242, 236, 228, 0.12);
+$color-overlay: rgba(20, 17, 15, 0.7); // затемнение поверх видео/фото
+$color-placeholder: #2e7d32; // зелёные заглушки вместо фото/видео
+$color-success: #4f8a4b;
+$color-error: #c0392b;
+
+// ===== Сетка =====
+$container-width: 1200px;
+$gutter: 16px;
+$header-height: 64px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+
+// Миксин, а не голый :root — иначе @use в каждом компоненте дублировал бы этот блок.
+// Подключается один раз в styles.scss.
+@mixin css-vars {
+  --color-bg: #{$color-bg};
+  --color-bg-elevated: #{$color-bg-elevated};
+  --color-bg-muted: #{$color-bg-muted};
+  --color-text: #{$color-text};
+  --color-text-muted: #{$color-text-muted};
+  --color-text-inverse: #{$color-text-inverse};
+  --color-accent: #{$color-accent};
+  --color-accent-hover: #{$color-accent-hover};
+  --color-blood: #{$color-blood};
+  --color-steel: #{$color-steel};
+  --color-border: #{$color-border};
+  --color-overlay: #{$color-overlay};
+  --color-placeholder: #{$color-placeholder};
+  --color-success: #{$color-success};
+  --color-error: #{$color-error};
+}

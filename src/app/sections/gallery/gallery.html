@@ -1,0 +1,14 @@
+<section class="section" id="gallery">
+  <div class="container">
+    <h2 class="section__title">Галерея</h2>
+    <p class="section__lead">&lt;Подпись: например, кадры с прошлых турниров&gt;</p>
+
+    <ul class="gallery">
+      @for (item of items; track $index) {
+        <li class="ph gallery__item" [class.gallery__item--wide]="item.isWide">
+          {{ item.isVideo ? 'видео' : 'фото' }}
+        </li>
+      }
+    </ul>
+  </div>
+</section>

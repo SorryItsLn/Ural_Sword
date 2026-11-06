@@ -1,0 +1,8 @@
+{
+  "name": "Ural Sword",
+  "short_name": "Ural Sword",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
+  "theme_color": "#14110f",
+  "background_color": "#14110f",
+  "display": "standalone"
+}

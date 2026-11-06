@@ -1,0 +1,15 @@
+<section class="section" id="program">
+  <div class="container">
+    <h2 class="section__title">Программа</h2>
+    <p class="section__lead">&lt;Дата&gt;. Расписание может немного сдвигаться по ходу турнира.</p>
+
+    <ol class="program">
+      @for (item of schedule; track $index) {
+        <li class="program__item">
+          <span class="program__time">{{ item.time }}</span>
+          <span class="program__title">{{ item.title }}</span>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

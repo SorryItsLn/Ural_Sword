@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-label="Ural Sword">
+  <!-- Временный логотип: щит с мечом + надпись. Заменить на финальный от дизайна. -->
+  <g transform="translate(4 4)">
+    <path d="M36 0 L70 10 V36 C70 56 54 68 36 72 C18 68 2 56 2 36 V10 Z" fill="#1e1a17" stroke="#b8892f" stroke-width="4"/>
+    <path d="M36 12 L40 18 V48 H32 V18 Z" fill="#f2ece4"/>
+    <rect x="22" y="48" width="28" height="5" rx="2" fill="#b8892f"/>
+    <rect x="33" y="53" width="6" height="9" fill="#8c939b"/>
+    <circle cx="36" cy="64" r="3.5" fill="#b8892f"/>
+  </g>
+  <text x="90" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="3" fill="#f2ece4">URAL</text>
+  <text x="90" y="68" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="3" fill="#b8892f">SWORD</text>
+</svg>

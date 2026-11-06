@@ -1,0 +1,80 @@
+@use 'variables' as v;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid v.$color-border;
+  background: rgba(v.$color-bg, 0.92);
+  backdrop-filter: blur(8px);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: v.$header-height;
+  }
+
+  &__logo img {
+    height: 40px;
+    width: auto;
+  }
+
+  &__nav {
+    display: none;
+    position: absolute;
+    top: v.$header-height;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px v.$gutter;
+    background: v.$color-bg;
+    border-bottom: 1px solid v.$color-border;
+
+    &--open {
+      display: flex;
+    }
+
+    @media (min-width: v.$bp-desktop) {
+      display: flex;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      gap: 28px;
+      padding: 0;
+      border: 0;
+      background: none;
+    }
+  }
+
+  &__link {
+    color: v.$color-text-muted;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: v.$color-text;
+    }
+  }
+
+  &__burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    span {
+      width: 24px;
+      height: 2px;
+      background: v.$color-text;
+    }
+
+    @media (min-width: v.$bp-desktop) {
+      display: none;
+    }
+  }
+}
