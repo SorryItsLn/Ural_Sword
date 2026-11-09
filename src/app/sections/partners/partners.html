@@ -1,0 +1,15 @@
+<section class="section section--muted" id="partners">
+  <div class="container">
+    <h2 class="section__title">Партнеры</h2>
+    <p class="section__lead">&lt;Короткое пояснение: кто поддерживает турнир&gt;</p>
+
+    <ul class="partners">
+      @for (partner of partners; track $index) {
+        <li class="partners__item">
+          <div class="ph partners__logo">логотип</div>
+          <p class="partners__name">{{ partner.name }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

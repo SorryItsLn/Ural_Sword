@@ -4,6 +4,8 @@ export * from './gallery/gallery';
 export * from './header/header';
 export * from './hero/hero';
 export * from './nominations/nominations';
+export * from './organizers/organizers';
+export * from './partners/partners';
 export * from './place/place';
 export * from './program/program';
 export * from './school/school';

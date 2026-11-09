@@ -1,14 +1,19 @@
 <header class="header">
   <div class="container header__inner">
+    <nav class="header__nav" [class.header__nav--open]="isMenuOpen()">
+      @for (link of leftLinks; track link.href) {
+        <a class="header__link" [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+      }
+    </nav>
+
     <a class="header__logo" href="#top" (click)="closeMenu()">
-      <img src="logo.svg" alt="Ural Sword" width="160" height="40" />
+      <img src="logo.svg" alt="Ural Sword" width="160" height="64" />
     </a>
 
     <nav class="header__nav" [class.header__nav--open]="isMenuOpen()">
-      @for (link of links; track link.href) {
+      @for (link of rightLinks; track link.href) {
         <a class="header__link" [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
       }
-      <a class="btn header__cta" href="#tickets" (click)="closeMenu()">Билеты</a>
     </nav>
 
     <button

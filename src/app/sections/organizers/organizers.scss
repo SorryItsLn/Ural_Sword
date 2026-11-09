@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+.organizers {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: v.$bp-tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__photo {
+    aspect-ratio: 1;
+    margin-bottom: 16px;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    font-size: 22px;
+  }
+
+  &__role {
+    margin-bottom: 8px;
+    color: v.$color-accent;
+  }
+
+  &__desc {
+    color: v.$color-text-muted;
+  }
+}

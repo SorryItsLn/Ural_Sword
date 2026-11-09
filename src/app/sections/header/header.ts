@@ -6,13 +6,16 @@ import { Component, signal } from '@angular/core';
   templateUrl: './header.html',
 })
 export class Header {
-  protected readonly links = [
-    { href: '#about', label: 'О турнире' },
-    { href: '#nominations', label: 'Номинации' },
-    { href: '#program', label: 'Программа' },
-    { href: '#place', label: 'Место' },
-    { href: '#school', label: 'Школа' },
+  protected readonly leftLinks = [
+    { href: '#organizers', label: 'Организаторы' },
+    { href: '#partners', label: 'Партнеры' },
     { href: '#gallery', label: 'Галерея' },
+  ];
+
+  protected readonly rightLinks = [
+    { href: '#registration', label: 'Регистрация' },
+    { href: '#program', label: 'Программа' },
+    { href: '#tickets', label: 'Билеты' },
   ];
 
   protected readonly isMenuOpen = signal(false);

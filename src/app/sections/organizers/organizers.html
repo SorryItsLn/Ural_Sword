@@ -1,0 +1,17 @@
+<section class="section" id="organizers">
+  <div class="container">
+    <h2 class="section__title">Организаторы</h2>
+    <p class="section__lead">&lt;Короткое пояснение: кто делает турнир&gt;</p>
+
+    <ul class="organizers">
+      @for (organizer of organizers; track $index) {
+        <li class="card organizers__item">
+          <div class="ph organizers__photo">фото</div>
+          <h3 class="organizers__name">{{ organizer.name }}</h3>
+          <p class="organizers__role">{{ organizer.role }}</p>
+          <p class="organizers__desc">{{ organizer.description }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

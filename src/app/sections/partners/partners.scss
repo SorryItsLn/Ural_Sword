@@ -1,0 +1,28 @@
+@use 'variables' as v;
+
+.partners {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: v.$bp-tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: v.$bp-desktop) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &__logo {
+    aspect-ratio: 3 / 2;
+    margin-bottom: 8px;
+  }
+
+  &__name {
+    color: v.$color-text-muted;
+    text-align: center;
+  }
+}
