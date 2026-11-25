@@ -21,7 +21,12 @@ body {
   margin: 0;
   background: v.$color-bg;
   color: v.$color-text;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
   line-height: 1.5;
 }
 
@@ -121,17 +126,4 @@ img {
   border: 1px solid v.$color-border;
   border-radius: 8px;
   background: v.$color-bg-muted;
-}
-
-// Зелёная заглушка вместо фото/видео. Пропорции задаём через aspect-ratio на месте.
-.ph {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  border-radius: 8px;
-  background: v.$color-placeholder;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 14px;
-  text-align: center;
 }
