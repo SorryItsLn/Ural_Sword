@@ -1,12 +1,18 @@
 <section class="section section--muted" id="partners">
   <div class="container">
     <h2 class="section__title">Партнеры</h2>
-    <p class="section__lead">&lt;Короткое пояснение: кто поддерживает турнир&gt;</p>
+    <p class="section__lead">Турнир проходит при поддержке партнёров и друзей «Меча Урала».</p>
 
     <ul class="partners">
       @for (partner of partners; track $index) {
         <li class="partners__item">
-          <div class="ph partners__logo">логотип</div>
+          <app-photo
+            class="partners__logo"
+            [src]="partner.logo"
+            [alt]="partner.name"
+            label="логотип"
+            fit="contain"
+          />
           <p class="partners__name">{{ partner.name }}</p>
         </li>
       }

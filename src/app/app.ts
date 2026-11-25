@@ -7,8 +7,6 @@ import {
   Header,
   Hero,
   Nominations,
-  Organizers,
-  Partners,
   Place,
   Program,
   School,
@@ -16,20 +14,7 @@ import {
 } from './sections';
 
 @Component({
-  imports: [
-    About,
-    Footer,
-    Gallery,
-    Header,
-    Hero,
-    Nominations,
-    Organizers,
-    Partners,
-    Place,
-    Program,
-    School,
-    Tickets,
-  ],
+  imports: [About, Footer, Gallery, Header, Hero, Nominations, Place, Program, School, Tickets],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',

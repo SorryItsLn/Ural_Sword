@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Меч Урала — турнир по историческому средневековому бою | Пермь</title>
+    <title>Меч Урала — турнир по историческому средневековому бою | Пермь, 6 февраля 2027</title>
     <meta
       name="description"
-      content="Турнир «Меч Урала» в Перми: бои в доспехах, лучшие бойцы региона, [дата] на [площадка]. Билеты онлайн. Школа ИСБ Пермь — запишитесь на пробную тренировку."
+      content="6 февраля 2027 года в Перми — турнир «Меч Урала»: командные бои 5×5 и 12×12 на большом ристалище. Для зрителей — трибуны, ведущий, фотозона и буфет, вход по билетам. СК «Сухарево», шоссе Космонавтов, 158А."
     />
 
-    <link rel="canonical" href="https://[домен]/" />
+    <link rel="canonical" href="https://sorryitsln.github.io/Ural_Sword/" />
 
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#14110f" />
@@ -19,14 +19,20 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:site_name" content="Меч Урала" />
-    <meta property="og:title" content="Меч Урала — рыцарский турнир в Перми" />
+    <meta
+      property="og:title"
+      content="Меч Урала — большой турнир по историческому средневековому бою"
+    />
     <meta
       property="og:description"
-      content="Бои в доспехах, звон стали и честные поединки. [Дата], [площадка]. Билеты онлайн."
+      content="6 февраля 2027, Пермь, СК «Сухарево». Командные бои 5×5 и 12×12, трибуны, фотозона и буфет для зрителей. Вход по билетам."
     />
-    <meta property="og:url" content="https://[домен]/" />
+    <meta property="og:url" content="https://sorryitsln.github.io/Ural_Sword/" />
 
-    <meta property="og:image" content="https://[домен]/assets/og-cover.jpg" />
+    <meta
+      property="og:image"
+      content="https://sorryitsln.github.io/Ural_Sword/assets/img/og-cover.jpg"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Бойцы в доспехах на турнире «Меч Урала»" />
@@ -36,20 +42,14 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
 
-    <link
-      rel="preload"
-      href="assets/fonts/heading.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+    <link rel="preload" href="assets/fonts/heading.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/fonts/body.woff2" as="font" type="font/woff2" crossorigin />
 
     <link
       rel="preload"
-      href="assets/hero-poster.avif"
+      href="assets/img/hero-poster.jpg"
       as="image"
-      type="image/avif"
+      type="image/jpeg"
       fetchpriority="high"
     />
 
@@ -59,41 +59,33 @@
         "@graph": [
           {
             "@type": "Event",
-            "@id": "https://[домен]/#event",
-            "name": "Меч Урала — турнир по историческому средневековому бою",
-            "description": "Турнир по историческому средневековому бою в Перми: поединки в доспехах, [формат].",
-            "startDate": "[2026-11-XXT11:00:00+05:00]",
-            "endDate": "[2026-11-XXT18:00:00+05:00]",
+            "@id": "https://sorryitsln.github.io/Ural_Sword/#event",
+            "name": "Меч Урала — большой турнир по историческому средневековому бою",
+            "description": "Командные бои 5×5 и 12×12 на большом ристалище в Перми. Для бойцов — раздевалки, душевые и питание, для зрителей — трибуны, ведущий, фотозона и буфет. Вход по билетам.",
+            "startDate": "2027-02-06T11:00:00+05:00",
+            "endDate": "2027-02-06T18:00:00+05:00",
             "eventStatus": "https://schema.org/EventScheduled",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "image": ["https://[домен]/assets/og-cover.jpg"],
+            "image": ["https://sorryitsln.github.io/Ural_Sword/assets/img/og-cover.jpg"],
             "location": {
               "@type": "Place",
-              "name": "[название площадки]",
+              "name": "СК «Сухарево»",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "[улица, дом]",
+                "streetAddress": "шоссе Космонавтов, 158А",
                 "addressLocality": "Пермь",
                 "addressRegion": "Пермский край",
                 "addressCountry": "RU"
               }
             },
-            "organizer": { "@id": "https://[домен]/#school" },
-            "offers": {
-              "@type": "Offer",
-              "url": "[ссылка на билеты]",
-              "price": "[500]",
-              "priceCurrency": "RUB",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "[2026-10-XXT00:00:00+05:00]"
-            }
+            "organizer": { "@id": "https://sorryitsln.github.io/Ural_Sword/#school" }
           },
           {
             "@type": "SportsOrganization",
-            "@id": "https://[домен]/#school",
+            "@id": "https://sorryitsln.github.io/Ural_Sword/#school",
             "name": "Школа ИСБ Пермь",
-            "url": "https://[домен]/",
-            "logo": "https://[домен]/assets/logo.png",
+            "url": "https://sorryitsln.github.io/Ural_Sword/",
+            "logo": "https://sorryitsln.github.io/Ural_Sword/assets/img/logo.png",
             "telephone": "[+7XXXXXXXXXX]",
             "address": {
               "@type": "PostalAddress",

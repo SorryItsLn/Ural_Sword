@@ -1,15 +1,24 @@
 <section class="section" id="program">
   <div class="container">
     <h2 class="section__title">Программа</h2>
-    <p class="section__lead">&lt;Дата&gt;. Расписание может немного сдвигаться по ходу турнира.</p>
+    <p class="section__lead">
+      6 февраля 2027 года. Расписание может немного сдвигаться по ходу турнира.
+    </p>
 
-    <ol class="program">
-      @for (item of schedule; track $index) {
-        <li class="program__item">
-          <span class="program__time">{{ item.time }}</span>
-          <span class="program__title">{{ item.title }}</span>
-        </li>
-      }
-    </ol>
+    @if (schedule.length) {
+      <ol class="program">
+        @for (item of schedule; track $index) {
+          <li class="program__item">
+            <span class="program__time">{{ item.time }}</span>
+            <span class="program__title">{{ item.title }}</span>
+          </li>
+        }
+      </ol>
+    } @else {
+      <p class="program__note">
+        Подробности программы и расписание соревнований опубликуем позже — следите за новостями
+        группы.
+      </p>
+    }
   </div>
 </section>

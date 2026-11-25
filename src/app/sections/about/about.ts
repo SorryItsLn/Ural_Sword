@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
 
+import { Photo } from '../../shared/photo/photo';
+
 @Component({
   selector: 'app-about',
+  imports: [Photo],
   styleUrl: './about.scss',
   templateUrl: './about.html',
 })
-export class About {
-  protected readonly stats = [
-    { value: '<N>', label: 'бойцов' },
-    { value: '<N>', label: 'городов' },
-    { value: '<N>', label: 'номинаций' },
-    { value: '<N>', label: 'зрителей в прошлом году' },
-  ];
-}
+export class About {}

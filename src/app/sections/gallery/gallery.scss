@@ -21,9 +21,14 @@
   &__item {
     aspect-ratio: 1;
 
+    // Слот фото растягиваем на всю плитку
+    app-photo {
+      height: 100%;
+    }
+
     &--wide {
       grid-column: span 2;
-      aspect-ratio: auto;
+      aspect-ratio: 2 / 1;
     }
   }
 }

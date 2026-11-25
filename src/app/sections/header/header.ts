@@ -7,8 +7,8 @@ import { Component, signal } from '@angular/core';
 })
 export class Header {
   protected readonly leftLinks = [
-    { href: '#organizers', label: 'Организаторы' },
-    { href: '#partners', label: 'Партнеры' },
+    { href: '#about', label: 'О турнире' },
+    { href: '#nominations', label: 'Номинации' },
     { href: '#gallery', label: 'Галерея' },
   ];
 

@@ -1,12 +1,12 @@
 <section class="section" id="gallery">
   <div class="container">
     <h2 class="section__title">Галерея</h2>
-    <p class="section__lead">&lt;Подпись: например, кадры с прошлых турниров&gt;</p>
+    <p class="section__lead">Кадры с турниров «Меч Урала».</p>
 
     <ul class="gallery">
       @for (item of items; track $index) {
-        <li class="ph gallery__item" [class.gallery__item--wide]="item.isWide">
-          {{ item.isVideo ? 'видео' : 'фото' }}
+        <li class="gallery__item" [class.gallery__item--wide]="item.isWide">
+          <app-photo [src]="item.src" alt="Кадр с турнира" label="фото" />
         </li>
       }
     </ul>

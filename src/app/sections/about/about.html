@@ -3,26 +3,46 @@
     <div class="about__text">
       <h2 class="section__title">О турнире</h2>
       <p class="section__lead">
-        &lt;Пара предложений: что за турнир, кто участвует, почему стоит прийти. Например: бои в
-        полном доспехе, лучшие бойцы Урала и соседних регионов, честные поединки по правилам
-        ИСБ.&gt;
+        «Меч Урала» — большой турнир по историческому средневековому бою. 6 февраля 2027 года в
+        Перми: полноценное спортивное событие, где всё продумано и для участников, и для зрителей.
       </p>
-      <p class="about__desc">&lt;Дополнительный абзац: история турнира, организаторы, формат.&gt;</p>
+      <p class="about__desc">
+        Цель турнира — достойные условия для полноценных командных сражений и яркая атмосфера
+        большого праздника для всех, кто выйдет на ристалище и на трибуны.
+      </p>
 
-      <ul class="about__stats">
-        @for (stat of stats; track stat.label) {
-          <li class="about__stat">
-            <span class="about__value">{{ stat.value }}</span>
-            <span class="about__label">{{ stat.label }}</span>
-          </li>
-        }
-      </ul>
+      <div class="about__audience">
+        <div class="about__group">
+          <h3 class="about__group-title">Бойцам</h3>
+          <ul class="about__list">
+            <li>большое ристалище для командных боёв 5×5 и 12×12;</li>
+            <li>просторные раздевалки и душевые;</li>
+            <li>питание для участников;</li>
+            <li>призы для победителей и призёров.</li>
+          </ul>
+        </div>
+
+        <div class="about__group">
+          <h3 class="about__group-title">Зрителям</h3>
+          <ul class="about__list">
+            <li>удобные трибуны с отличным обзором ристалища;</li>
+            <li>ведущий, который помогает следить за ходом соревнований;</li>
+            <li>фотозона, где получаются незабываемые кадры;</li>
+            <li>буфет — можно перекусить и отдохнуть между боями.</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="about__photos">
-      <div class="ph about__photo about__photo--big">фото</div>
-      <div class="ph about__photo">фото</div>
-      <div class="ph about__photo">фото</div>
+      <app-photo
+        class="about__photo about__photo--big"
+        src="assets/img/about-1.jpg"
+        label="фото 16:9"
+        alt="Бойцы на турнире"
+      />
+      <app-photo class="about__photo" src="assets/img/about-2.jpg" label="фото 1:1" alt="" />
+      <app-photo class="about__photo" src="assets/img/about-3.jpg" label="фото 1:1" alt="" />
     </div>
   </div>
 </section>

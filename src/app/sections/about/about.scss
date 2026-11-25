@@ -14,33 +14,35 @@
     color: v.$color-text-muted;
   }
 
-  &__stats {
+  &__audience {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    margin: 40px 0 0;
-    padding: 0;
-    list-style: none;
+    margin-top: 32px;
+
+    @media (min-width: v.$bp-tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+    }
   }
 
-  &__stat {
-    display: flex;
-    flex-direction: column;
-    padding-left: 16px;
-    border-left: 3px solid v.$color-accent;
-  }
-
-  &__value {
+  &__group-title {
+    margin-bottom: 12px;
     color: v.$color-accent;
-    font-family: Georgia, serif;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
   }
 
-  &__label {
-    margin-top: 6px;
+  &__list {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding-left: 20px;
     color: v.$color-text-muted;
+
+    li::marker {
+      color: v.$color-accent;
+    }
   }
 
   &__photos {
